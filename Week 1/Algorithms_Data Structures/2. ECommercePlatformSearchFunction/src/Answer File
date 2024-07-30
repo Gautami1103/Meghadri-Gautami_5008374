@@ -1,0 +1,76 @@
+1.	Understand Asymptotic Notation:
+    o	Explain Big O notation and how it helps in analyzing algorithms.
+Ans:Big O notation is a mathematical notation used in computer science to describe the performance or complexity of an
+    algorithm. It provides a standardized way to measure how the runtime or space requirements of an algorithm grow as
+    the input size increases. Big O, often referred to as “Order of,” expresses the upper bound of an algorithm’s time
+    complexity. It analyzes the worst-case scenario for an algorithm.
+
+    Analyzing Algorithms:
+    -> Comparing algorithms: We can compare different algorithms based on their Big O notation to choose the most
+       efficient one for a given problem.
+    -> Predicting performance: Knowing the Big O notation of an algorithm helps us estimate how its performance will
+       scale as the input size grows.
+    -> Identifying bottlenecks: By analyzing the Big O notation, we can identify parts of an algorithm that contribute
+        most to its overall complexity and focus optimization efforts there.
+    -> Understanding limitations: Big O notation helps us understand the inherent limitations of certain algorithms
+        and when they might become impractical for large datasets.
+
+    Some Common Time Complexities:
+    * O(1): Constant time - The algorithm's runtime is independent of the input size.
+    * O(log n): Logarithmic time - The runtime grows logarithmically with the input size.
+    * O(n): Linear time - The runtime grows linearly with the input size.
+    * O(n log n): Linear-logarithmic time - A combination of linear and logarithmic growth.
+    * O(n^2): Quadratic time - The runtime grows quadratically with the input size.
+    * O(2^n): Exponential time - The runtime grows exponentially with the input size.
+
+
+    o	Describe the best, average, and worst-case scenarios for search operations.
+Ans:Searching in data structures involves finding a specific element within a collection of items.
+    The common possible scenarios for searching are as:
+
+    a) Best Case[Very rarely used] : For the best-case analysis, we calculate the lower bound on the running time of an
+            algorithm. We must know the case that causes a minimum number of operations to be executed. Eg: In the linear
+            search problem, the best case occurs when x is present at the first location. The number of operations in the
+            best case is constant (not dependent on n). So time complexity in the best case would be O(1). It is the most
+            optimal outcome of a search operation.
+
+    b) Average Case Analysis[Rarely used] : In average case analysis, we take all possible inputs and calculate the
+            computing time for all of the inputs. Sum all the calculated values and divide the sum by the total number
+            of inputs. Example - For the linear search problem, let us assume that all cases are uniformly distributed
+            (including the case of x not being present in the array). So we sum all the cases and divide the sum by (n+1).
+
+    c) Worst Case Analysis[Mostly used] : In the worst-case analysis, we calculate the upper bound on the running time
+            of an algorithm. We must know the case that causes a maximum number of operations to be executed. Eg: For Linear
+             Search, the worst case happens when the element to be searched (x) is not present in the array or is present
+             at the last index. Thus, the search() function compares it with all the elements of arr[] one by one.
+             Therefore, the worst-case time complexity of the linear search would be O(n).
+
+    From all these scenarios, we can conclude that the lower the worst-case complexity of an algorithm, more efficient
+    is the algorithm.
+
+
+4.	Analysis:
+    o	Compare the time complexity of linear and binary search algorithms.
+Ans: Linear Search:
+        Time complexity: O(n)
+        Explanation: In the worst-case scenario, you might have to check every element in the array, making the time
+        complexity directly proportional to the number of elements (n).\
+        Linear search performs equality comparisons, making the process slow and complex.
+
+     Binary Search:
+        Time Complexity: O(log n) – Binary search algorithm divides the input array in half at every step, reducing the
+        search space by half, and hence has a time complexity of logarithmic order.
+        Sorting Time Complexity for Binary Search: Sorting the array adds a time complexity of O(n log n) if sorting
+        is required.
+        In Binary Search, the middle element is looked at to check if it is greater than or less than the value to be
+        searched. Accordingly, the search is applied to either half of the given list.
+
+    Thus, Binary search is generally much faster than linear search, especially for large datasets, the only limitation
+    being that it can only be applied to sorted data structures.
+
+    o	Discuss which algorithm is more suitable for your platform and why.
+Ans: If for the above problem, we are using small datasets or infrequent searches or unsorted searches then we may
+     consider Linear Search as more suitable due to its simple behaviour.
+
+     But for all other cases such as large datasets, frequent searches or sorted searches, Binary Search is more optimized
+     and efficient as an algorithm.
