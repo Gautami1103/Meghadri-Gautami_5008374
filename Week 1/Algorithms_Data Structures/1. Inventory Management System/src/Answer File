@@ -1,0 +1,64 @@
+1.	Understand the Problem:
+    o	Explain why data structures and algorithms are essential in handling large inventories.
+Ans:Data inventories are comprehensive and organized records of a vast amount of information collected, processed,
+    stored and managed by organizations and corporations. To handle this voluminous data or to perform any operations or
+    to deduce any value from it through standard means is very tedious and inefficient. To make this better, data structures
+    and algorithms came into role. Data structures are fundamental concepts which are used in organizing and manipulating
+    data efficiently. Algorithms are step-by-step procedures or formulas for solving problems using these convenient data
+    structures.
+    Together, they can be used in writing optimized and efficient codes, in providing us the ability to solve complex problems
+    and perform various complex manipulations in a relatively simpler manner. Thus, Data structures and algorithms play
+    a crucial role in handling large inventories in the following ways:
+    a) Efficient Data Handling
+    b) Memory Optimization: Efficient allocation and utilization minimize memory wastage, especially when dealing with
+        large datasets
+    c) Processing Time: Reduces operation time significantly
+    d) Complex Problem Solving
+    e) Reduce Costs
+
+    Real-world Examples:
+    -> E-commerce: Efficiently managing millions of products and their inventory levels.
+    -> Warehousing: Tracking the location and quantity of products in large warehouses.
+    -> Retail: Managing stock levels across multiple stores.
+    -> Manufacturing: Controlling raw material and finished product inventory.
+
+    o	Discuss the types of data structures suitable for this problem.
+Ans:Analyzing the problem, we conclude that:
+    -> Creation of a class Product with several attributes
+    -> A data structure to store the products
+    -> Addition, Deletion and Updation operations to be performed on the products
+
+    With understanding of the above problem statement, the potential data structures that can be used for the problem are:
+    a) ArrayList : An ArrayList is a dynamic array data structure used for efficient storage and retrieval of elements.
+                   It has features such as dynamic sizing , contiguous memory allocation and indexed access.
+                   Operations:
+                   Add: O(1) (for adding at the end)
+                   Update: O(1)
+                   Delete: O(n) (since removing requires shifting elements)
+                   Peek: O(n) (if not using an index)
+
+    b) HashMap : A HashMap is a data structure that provides efficient key-value pair storage and retrieval, where each
+                 key maps to a corresponding value and each key within the HashMap is unique. It performs on the basis of
+                 a hashing function. It has features such as constant access time, collision handling and dynamic sizing.
+                 Operations:
+                 Add: Average O(1)
+                 Update: Average O(1)
+                 Delete: Average O(1)
+                 Peek: Average O(1)
+
+
+4.	Analysis:
+    o	Analyze the time complexity of each operation (add, update, delete) in your chosen data structure.
+Ans: Add Operation: O(1) (average) - Adding a product to HashMap involves hashing the key and inserting the value.
+     Update Operation: O(1) (average) - Updating a product involves locating the entry by key and replacing the value.
+     Delete Operation: O(1) (average) - Removing a product involves locating the entry by key and deleting it.
+     Peek(Display) Operation: O(1) (average) - Finding a product by key involves hashing the key and accessing the value.
+
+    o	Discuss how you can optimize these operations.
+Ans:All the operations are already executing in an average case best complexity, but for more optimization we cna consider these
+    points:
+    -> Minimization of collisions by using a good hash function
+    -> Use of caching for storing certain products' information which are accessed more frequently than others
+    -> Batch - processing for large-scale updates or deletions
+
+
