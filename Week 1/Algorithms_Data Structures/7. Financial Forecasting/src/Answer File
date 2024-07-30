@@ -1,0 +1,31 @@
+1.	Understand Recursive Algorithms:
+    o	Explain the concept of recursion and how it can simplify certain problems.
+Ans:Recursion:
+    Recursion is a problem-solving technique where a function calls itself to solve a smaller version of the same problem.
+    It's like breaking down a complex task into simpler, repetitive steps.
+
+    How Recursion Works:
+    * Base Case: This is the simplest form of the problem that can be solved directly without further recursion. It's the stopping
+        condition to prevent infinite loops.
+    * Recursive Case: The problem is broken down into smaller sub-problems, and the function calls itself to solve these
+        sub-problems.
+    * Return Value: The results from the recursive calls are combined to solve the original problem.
+
+    Why Use Recursion?
+    -> Simplicity: Recursive solutions often mirror the problem's structure, leading to elegant and concise code.
+    -> Natural fit: Many problems, especially those involving hierarchical or tree-like structures, have natural recursive solutions.
+    -> Divide and Conquer: Recursion effectively breaks down complex problems into smaller, more manageable sub-problems.
+
+4.	Analysis:
+    o	Discuss the time complexity of your recursive algorithm.
+Ans: * Time Complexity: O(n), where n is the number of years. Each recursive call represents a year, so the function makes
+            n recursive calls.
+     * Space Complexity: O(n) due to the recursion call stack. Each recursive call adds a new frame to the call stack, which
+            can grow up to n frames deep.
+
+    o	Explain how to optimize the recursive solution to avoid excessive computation.
+Ans:  To avoid excessive computation and improve efficiency, you can use memoization or iterative approaches:
+      -> Memoization: Store previously computed results to avoid redundant calculations. This technique can be applied if you
+            are performing multiple recursive calls with overlapping sub-problems.
+      -> Iterative Approach: Convert the recursive algorithm to an iterative one to avoid the overhead of recursive calls and
+            stack space.
