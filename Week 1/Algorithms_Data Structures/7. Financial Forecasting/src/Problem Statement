@@ -1,14 +1,14 @@
-Exercise 6: Library Management System
+Exercise 7: Financial Forecasting
 Scenario:
-You are developing a library management system where users can search for books by title or author.
+You are developing a financial forecasting tool that predicts future values based on past data.
 Steps:
-1.	Understand Search Algorithms:
-    o	Explain linear search and binary search algorithms.
+1.	Understand Recursive Algorithms:
+    o	Explain the concept of recursion and how it can simplify certain problems.
 2.	Setup:
-    o	Create a class Book with attributes like bookId, title, and author.
+    o	Create a method to calculate the future value using a recursive approach.
 3.	Implementation:
-    o	Implement linear search to find books by title.
-    o	Implement binary search to find books by title (assuming the list is sorted).
+    o	Implement a recursive algorithm to predict future values based on past growth rates.
 4.	Analysis:
-    o	Compare the time complexity of linear and binary search.
-    o	Discuss when to use each algorithm based on the data set size and order.
+    o	Discuss the time complexity of your recursive algorithm.
+    o	Explain how to optimize the recursive solution to avoid excessive computation.
+
