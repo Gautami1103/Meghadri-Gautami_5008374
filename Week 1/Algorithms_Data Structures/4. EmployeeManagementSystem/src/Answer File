@@ -1,0 +1,59 @@
+1.	Understand Array Representation:
+    o	Explain how arrays are represented in memory and their advantages.
+Ans:An array is a collection of elements of the same data type stored in contiguous memory locations. This means that the
+    elements of an array are placed one after the other in memory, without any gaps. Arrays allow random access to elements.
+    This makes accessing elements by position faster. Arrays have better cache locality which makes a pretty big difference
+    in performance. Arrays represent multiple data items of the same type using a single name.
+
+    Key Characteristics of Array Representation:
+    -> Base address: The memory address of the first element in the array is called the base address.
+    -> Element size: The size of each element in the array is determined by its data type.
+    -> Index: Each element in the array is accessed using an index, which starts from 0.
+
+    Calculation of element address: The address of any element in the array can be calculated using the formula:
+
+        address of element = base address + (index * size of element)
+
+    Advantages:
+    * Fast Access: Direct access to elements via index makes operations like retrieval and update very fast.
+    * Simplicity: Arrays are straightforward to implement and use, and their structure is easy to understand.
+    * Memory Efficiency: Arrays don’t have overhead for pointers or metadata (except the base address), making them memory
+        efficient compared to some other data structures.
+
+4.	Analysis:
+    o	Analyze the time complexity of each operation (add, search, traverse, delete).
+Ans: -> Add Employee:
+        Time Complexity: O(1) (if there is space in the array)
+        Space Complexity: O(n) (where n is the number of employees)
+
+     -> Search Employee by ID:
+        Time Complexity: O(n) (linear search through the array)
+        Space Complexity:O(1) (constant space for searching)
+
+     -> Traverse Employees:
+        Time Complexity: O(n) (iterating through the array)
+        Space Complexity: O(1) (constant space for traversal)
+
+     -> Delete Employee by ID:
+        Time Complexity: O(n) (linear search and shifting elements)
+        Space Complexity: O(1) (constant space for deletion)
+
+    o	Discuss the limitations of arrays and when to use them.
+Ans: Limitations of Arrays:
+     -> Fixed size: Once an array is created, its size cannot be changed. This can lead to issues if the number of elements
+            grows beyond the initial capacity.
+     -> Inefficient insertions and deletions: Inserting or deleting elements at arbitrary positions requires shifting elements,
+            leading to O(n) time complexity.
+     -> Memory overhead: If the array size is much larger than the number of elements, it can lead to wasted memory.
+     -> Potential for index out-of-bounds errors: Accessing elements outside the array's bounds can cause runtime errors.
+     -> Limited Flexibility: Arrays do not support dynamic resizing, unlike data structures such as ArrayLists or other
+            collection classes.
+
+     When to Use Arrays:
+     -> Random access is frequent: Arrays excel at accessing elements directly by index.
+     -> Data size is known in advance: When the number of elements is predictable, arrays can be efficiently used.
+     -> Memory efficiency is critical: Arrays have minimal memory overhead compared to other data structures.
+     -> Simple implementation: Arrays are easy to understand and implement.
+
+
+
