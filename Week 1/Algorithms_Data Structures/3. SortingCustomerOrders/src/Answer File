@@ -1,0 +1,94 @@
+1.	Understand Sorting Algorithms:
+    o	Explain different sorting algorithms (Bubble Sort, Insertion Sort, Quick Sort, Merge Sort).
+Ans:    a) Bubble Sort: Compares adjacent elements and swaps them if they are in the wrong order. Repeatedly passes through
+                the list until no swaps occur.
+                Time complexity: O(n^2) in average and worst cases, O(n) in best case (already sorted).
+                Space complexity: O(1)
+
+                Code example:
+
+                for (int i = 0; i < n-1; i++)
+                    for (int j = 0; j < n-i-1; j++)
+                        if (arr[j] > arr[j+1])
+                            swap(arr[j], arr[j+1]);
+
+        b) Insertion Sort : Builds the sorted part of the array one element at a time by inserting elements into their
+                correct position.
+                Time complexity: O(n^2) in average and worst cases, O(n) in best case (already sorted).
+                Space complexity: O(1)
+
+                Code Example:
+
+                for (int i = 1; i < n; ++i) {
+                    int key = arr[i];
+                    int j = i - 1;
+                    while (j >= 0 && arr[j] > key) {
+                        arr[j + 1] = arr[j];
+                        j = j - 1;
+                    }
+                    arr[j + 1] = key;
+                }
+
+        c) Quick Sort: Picks a pivot element, partitions the array into two sub-arrays (less than and greater than pivot),
+                then recursively sorts the sub-arrays.
+                Time complexity: O(n log n) average case, O(n^2) worst case (already sorted or reverse sorted).
+                Space complexity: O(log n) average, O(n) worst case
+
+                Code Example:
+
+                quickSort(arr, low, high) {
+                    if (low < high) {
+                        pi = partition(arr, low, high);
+                        quickSort(arr, low, pi - 1);
+                        quickSort(arr, pi + 1, high);
+                    }
+                }
+
+        d) Merge Sort : Divides the array into two halves, recursively sorts the two halves, and merges them into a sorted
+                array.
+                Time complexity: O(n log n) in all cases.
+                Space complexity: O(n)
+
+                Code Example:
+
+                mergeSort(arr, l, r) {
+                    if (l < r) {
+                        m = (l+r)/2
+                        mergeSort(arr, l, m)
+                        mergeSort(arr, m+1, r)
+                        merge(arr, l, m, r)
+                    }
+                }
+
+
+4.	Analysis:
+    o	Compare the performance (time complexity) of Bubble Sort and Quick Sort.
+Ans:    a) Bubble Sort:
+            Best Case Time Complexity Analysis of Bubble Sort: O(N) - The best case occurs when the array is already sorted.
+            So the number of comparisons required is N-1 and the number of swaps required = 0. Hence the best case complexity
+            is O(N).
+
+            Worst Case Time Complexity Analysis of Bubble Sort: O(N^2) - The worst-case condition for bubble sort occurs
+            when elements of the array are arranged in decreasing order. In the worst case, the total number of iterations
+            or passes required to sort a given array is (N-1). where ‘N’ is the number of elements present in the array.
+
+        b) Quick Sort:
+            Best Case Time Complexity Analysis of Quick Sort : O(N log n) - The pivot chosen at each partition is the median
+            element of the array. This results in perfectly balanced sub-arrays.
+            Explanation: Each recursive call divides the array into two equal halves. This leads to a logarithmic number of
+            levels in the recursion tree. At each level, the total work done is proportional to N (due to partitioning).
+            Therefore, the overall time complexity is N * log N.
+
+
+            Worst Case Time Complexity Analysis of Quick Sort : O(N^2)
+            Condition: The pivot chosen is always the smallest or largest element in the array. This results in unbalanced
+            partitions.
+            Explanation: In this case, the recursion tree becomes skewed, with a depth of N. At each level, the work done
+            is proportional to N, resulting in an overall time complexity of N^2.
+
+    o	Discuss why Quick Sort is generally preferred over Bubble Sort.
+Ans:Quick Sort is mainly preferred due to it's:
+    -> Efficiency: Quick Sort generally performs better than Bubble Sort, especially for large datasets, due to its average
+        time complexity of O(n log(n)) compared to Bubble Sort's O(n^2).
+    -> Scalability: Quick Sort scales better with increasing data size. Bubble Sort's performance degrades significantly
+        with larger datasets due to its quadratic time complexity.
