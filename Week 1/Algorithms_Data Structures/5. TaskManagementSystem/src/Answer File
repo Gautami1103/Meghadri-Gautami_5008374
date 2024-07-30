@@ -1,0 +1,55 @@
+1.	Understand Linked Lists:
+    o	Explain the different types of linked lists (Singly Linked List, Doubly Linked List).
+Ans: * Singly Linked List:
+    It is the simplest type of linked list in which every node contains a data element and a pointer to the next node containing
+    a data element of the same type.The node contains a pointer to the next node means that the node stores the address of
+    the next node in the sequence.
+
+    head -> node1(_)data1 -> node2(_)data2 -> node3(_)data3 -> null
+
+    Time Complexity: O(N)
+    Auxiliary Space: O(N)
+
+     * Doubly Linked List:
+    A doubly linked list or a two-way linked list is a more complex type of linked list that contains a pointer to the next
+    as well as the previous node in sequence.
+    Therefore, it contains three parts of data, a pointer to the next node, and a pointer to the previous node. This would
+    enable us to traverse the list in the backward direction as well.
+
+    head <-> node1(_)data1 <-> node2(_)data2 <-> node3(_)data3 <-> tail
+
+    Time Complexity : O(1)
+    Auxiliary Space : O(N)
+
+4.	Analysis:
+    o	Analyze the time complexity of each operation.
+Ans:
+    * Add Task:
+    Time Complexity: O(n) (where n is the number of tasks; requires traversal to find the end)
+    Space Complexity:O(1) (constant space for addition)
+
+    * Search Task by ID:
+    Time Complexity: O(n) (linear search through the list)
+    Space Complexity: O(1) (constant space for searching)
+
+    * Traverse Tasks:
+    Time Complexity: O(n) (iterating through the list)
+    Space Complexity: O(1) (constant space for traversal)
+
+    * Delete Task by ID:
+    Time Complexity: O(n) (linear search and node removal)
+    Space Complexity: O(1) (constant space for deletion)
+
+    o	Discuss the advantages of linked lists over arrays for dynamic data.
+Ans:Advantages of LinkedLists Over Arrays:
+    -> Dynamic Size: Linked lists can grow or shrink dynamically, which is advantageous when the number of tasks is not known
+        in advance or changes frequently.
+    -> Efficient Insertions and Deletions: Inserting or deleting elements can be more efficient, particularly when the operations
+        are performed at the beginning or in the middle of the list. Arrays may require shifting elements, which can be costly.
+    -> Memory Utilization: Linked lists use memory proportional to the number of elements, as each node contains only the required
+        data and pointers.
+
+    When to Use Linked Lists:
+    -> When the number of elements is unknown or changes frequently.
+    -> When frequent insertions and deletions are required.
+    -> When memory overhead for pointers is acceptable and you don’t need constant-time random access.
