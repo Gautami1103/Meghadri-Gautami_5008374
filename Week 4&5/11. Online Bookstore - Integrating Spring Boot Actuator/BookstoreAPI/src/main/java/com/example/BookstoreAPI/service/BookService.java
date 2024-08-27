@@ -1,20 +1,15 @@
-package com.example.service;
+package com.book.BookstoreAPI.service;
 
-import org.modelmapper.ModelMapper;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.book.BookstoreAPI.model.Book;
 
-import com.example.DTO.BookDTO;
-import com.example.Entities.Book;
+import java.util.List;
+import java.util.Optional;
 
-public class BookService {
-    @Autowired
-    private ModelMapper modelMapper;
-
-    public BookDTO convertToDto(Book book) {
-        return modelMapper.map(book, BookDTO.class);
-    }
-
-    public Book convertToEntity(BookDTO bookDTO) {
-        return modelMapper.map(bookDTO, Book.class);
-    }
+public interface BookService {
+    Book createBook(Book book);
+    List<Book> getAllBooks();
+    Optional<Book> getBookById(Long id);
+    Book updateBook(Long id, Book book);
+    void deleteBook(Long id);
+    List<Book> getBooks(String title, String author);
 }
