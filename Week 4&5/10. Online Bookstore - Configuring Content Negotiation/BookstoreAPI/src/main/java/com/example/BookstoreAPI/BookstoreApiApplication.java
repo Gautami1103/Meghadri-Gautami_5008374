@@ -1,13 +1,13 @@
-package com.example.ex10;
+package com.example;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Ex10Application {
+public class BookstoreApiApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Ex10Application.class, args);
+		SpringApplication.run(BookstoreApiApplication.class, args);
 	}
 
 }
